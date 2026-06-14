@@ -1,0 +1,67 @@
+name: Sudoswap Financial Operations
+description: >-
+  Sudoswap is a permissionless, open-source AMM protocol governed by the $SUDO
+  token. Revenue is generated through protocol fees taken on swaps. There are
+  no subscription costs for using the core smart contract API. Costs for
+  developers are limited to Ethereum gas fees and optional third-party data
+  provider subscriptions.
+costs:
+  - name: Ethereum Gas Fees
+    description: >-
+      All on-chain interactions (pool creation, swaps, liquidity management)
+      require ETH to pay Ethereum network gas. Sudoswap v2 optimizes gas usage:
+      pool creation is 15-20% cheaper and swaps are 5-25% cheaper than v1.
+    type: variable
+    currency: ETH
+    basis: per transaction
+    notes: Gas prices fluctuate with Ethereum network congestion
+  - name: Protocol Swap Fee
+    description: >-
+      A percentage protocol fee is applied to each swap. The fee percentage is
+      set by governance ($SUDO token holders) and is typically a small fraction
+      of the swap value. Liquidity providers in TRADE pools may also collect
+      an LP fee set per pool.
+    type: percentage
+    basis: per swap
+    notes: >-
+      Protocol fee rate controlled by $SUDO governance; LP fee set by pool
+      creator; exact current rate available via the sudoswap interface or
+      governance portal
+  - name: Defined/Codex API Subscription
+    description: >-
+      The sudo-defined-quoter SDK for off-chain NFT pricing data requires a
+      Defined (Codex) API key. Pricing varies by plan and query volume.
+    type: subscription
+    currency: USD
+    basis: per month / per query
+    url: https://dashboard.codex.io/signup
+    notes: Optional; only needed for off-chain bid/ask quote functionality
+governance:
+  - name: SUDO Token
+    description: >-
+      The $SUDO governance token allows holders to vote on protocol changes
+      including fee adjustments, new bonding curve additions, router upgrades,
+      and pool whitelisting. Addresses with at least 300,000 SUDO delegated
+      can create on-chain proposals.
+    initialSupply: 60000000
+    circulatingSupply: 25390000
+    symbol: SUDO
+    distribution:
+      - allocation: XMON holders
+        percentage: 41.9
+      - allocation: 0xmons NFT holders
+        percentage: 1.5
+      - allocation: Retroactive LP airdrop
+        percentage: 1.5
+      - allocation: Team (3-year vest, 1-year cliff)
+        percentage: 15.1
+      - allocation: SudoRandom Labs (3-year vest, 1-year cliff)
+        percentage: 15.0
+      - allocation: Treasury
+        percentage: 25.1
+    url: https://tokeninsight.com/en/coins/sudoswap/tokenomics
+freeUsage:
+  description: >-
+    Core smart contract interactions are fully free (gas-only). No registration,
+    API keys, or subscription fees are required to create pools, execute swaps,
+    or provide liquidity through the Sudoswap protocol.

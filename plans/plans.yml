@@ -1,0 +1,54 @@
+name: Sudoswap Plans
+description: >-
+  Sudoswap is a permissionless, open-source AMM protocol. There are no
+  subscription tiers or API keys required to interact with the core smart
+  contracts on-chain. Protocol fees are taken as a percentage of swap volume
+  and are configurable via governance. The off-chain SDK (sudo-defined-quoter)
+  requires a Defined (Codex) API key for NFT quote data.
+plans:
+  - name: Open Protocol (Free)
+    description: >-
+      Any developer or user can interact with Sudoswap smart contracts directly
+      without registration, API keys, or fees beyond Ethereum gas costs. Pool
+      creation, swapping, and liquidity provision are fully permissionless.
+    url: https://docs.sudoswap.xyz/
+    price: 0.00
+    priceCurrency: USD
+    features:
+      - Permissionless smart contract interaction
+      - Pool creation (ERC-721 and ERC-1155)
+      - NFT-to-ETH and NFT-to-ERC-20 swaps
+      - Liquidity provision and withdrawal
+      - Linear, Exponential, XYK, and GDA bonding curves
+      - Multi-network deployment (Ethereum, Base, Arbitrum, Berachain, Sanko)
+      - Open-source codebase (AGPLv3)
+    rateLimits:
+      - type: On-chain
+        description: Rate limited only by Ethereum gas costs and block throughput
+  - name: The Graph Subgraph (Free Tier)
+    description: >-
+      Query the sudoswap subgraph on The Graph's hosted or decentralized network
+      for pool data, swap history, and NFT statistics. Free tier queries are
+      available with rate limits imposed by The Graph's gateway.
+    url: https://github.com/sudoswap/subgraph-swaps
+    price: 0.00
+    priceCurrency: USD
+    features:
+      - GraphQL access to all indexed sudoswap events
+      - Pool creation and swap history
+      - NFT collection liquidity data
+      - Protocol statistics
+  - name: Defined/Codex API (API Key Required)
+    description: >-
+      The sudo-defined-quoter SDK wraps the Defined (Codex) API to provide
+      real-time bid/ask quotes for NFT collections across supported chains.
+      Access requires a Defined API key with plans available at dashboard.codex.io.
+    url: https://docs.codex.io/
+    price: Variable
+    priceCurrency: USD
+    features:
+      - Real-time bid quotes (getBidQuotes)
+      - Real-time ask quotes (getAskQuotes)
+      - Multi-chain support (Mainnet, Arbitrum, Base, Sanko)
+      - Pool address and spot price data
+      - NFT metadata and collection-level analytics

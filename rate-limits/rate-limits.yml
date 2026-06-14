@@ -1,0 +1,47 @@
+name: Sudoswap Rate Limits
+description: >-
+  Sudoswap's core protocol operates as on-chain smart contracts with no
+  traditional REST API rate limits. Access constraints are determined by
+  Ethereum network conditions and gas costs. Off-chain data access through
+  The Graph subgraph and the Defined/Codex API carries its own rate limits
+  set by those third-party providers.
+rateLimits:
+  - name: Smart Contract Interactions
+    description: >-
+      Direct interactions with Sudoswap smart contracts (pool creation, swaps,
+      liquidity operations) are limited only by Ethereum network throughput and
+      gas prices. No artificial rate limits are imposed by the protocol.
+    type: network
+    limit: Unbounded (gas-constrained)
+    window: per block (~12 seconds on Ethereum)
+    enforcement: Ethereum network consensus
+  - name: The Graph Subgraph (Hosted Service)
+    description: >-
+      Queries to the sudoswap subgraph on The Graph's hosted service or
+      decentralized network are subject to The Graph's standard gateway rate
+      limits. Free queries are available but volume-intensive use requires
+      allocating GRT tokens on the decentralized network.
+    type: GraphQL queries
+    limit: ~1000 queries/day (free tier, approximate)
+    window: per day
+    enforcement: The Graph gateway
+    url: https://thegraph.com/docs/en/querying/querying-the-graph/
+  - name: Defined/Codex API (sudo-defined-quoter SDK)
+    description: >-
+      The Defined (Codex) API used by the sudo-defined-quoter SDK imposes rate
+      limits based on the API plan selected at dashboard.codex.io. Rate limits
+      vary by tier; consult Defined documentation for exact thresholds.
+    type: HTTP requests
+    limit: Plan-dependent
+    window: per minute / per day
+    enforcement: Defined API gateway
+    url: https://docs.codex.io/
+  - name: RPC Provider (Read Calls)
+    description: >-
+      Applications reading on-chain data (e.g., pool spot prices, pair state)
+      via eth_call are subject to the rate limits of their chosen RPC provider
+      (Infura, Alchemy, QuickNode, etc.) rather than sudoswap itself.
+    type: JSON-RPC calls
+    limit: Provider-dependent
+    window: per second / per day
+    enforcement: RPC provider gateway

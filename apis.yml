@@ -1,0 +1,156 @@
+name: Sudoswap
+description: >-
+  Sudoswap is a minimal, gas-efficient automated market maker (AMM) protocol
+  for NFTs that facilitates NFT-to-token swaps using customizable bonding
+  curves. It supports ERC-721 and ERC-1155 NFTs alongside ETH and ERC-20
+  tokens. Liquidity providers can create single-sided buy/sell pools or
+  dual-sided trade pools to earn fees. Developers interact with the protocol
+  through smart contracts (LSSVMPair, VeryFastRouter, bonding curve contracts)
+  and off-chain indexing services such as The Graph subgraph and the
+  Defined/Codex data API. Sudoswap v2 is deployed on Ethereum mainnet,
+  Arbitrum, Base, Berachain, Sanko, and other EVM-compatible networks.
+image: https://sudoswap.xyz/favicon.ico
+tags:
+  - NFT
+  - AMM
+  - DeFi
+  - Liquidity
+  - Bonding Curves
+  - ERC-721
+  - ERC-1155
+  - Ethereum
+url: https://sudoswap.xyz/
+apis:
+  - name: Sudoswap Smart Contract API
+    description: >-
+      On-chain smart contract interface for the Sudoswap AMM protocol.
+      Developers interact with LSSVMPairFactory to create pools, with
+      LSSVMPair contracts to deposit/withdraw assets, and with VeryFastRouter
+      to execute NFT-to-token and NFT-to-NFT swaps across multiple pairs.
+      Bonding curve contracts (Linear, Exponential, XYK, GDA) expose
+      getBuyInfo() and getSellInfo() for pricing queries.
+    image: https://sudoswap.xyz/favicon.ico
+    humanURL: https://docs.sudoswap.xyz/
+    baseURL: https://etherscan.io/address/0xA020d57aB0448Ef74115c112D18a9C231CC86000
+    tags:
+      - Smart Contracts
+      - NFT Swaps
+      - Liquidity Pools
+      - AMM
+      - Bonding Curves
+    properties:
+      - type: Documentation
+        url: https://docs.sudoswap.xyz/
+      - type: ReferenceDocumentation
+        url: https://docs.sudoswap.xyz/reference/pricing/
+      - type: SwappingReference
+        url: https://docs.sudoswap.xyz/reference/swapping/
+      - type: WrappedPoolsReference
+        url: https://docs.sudoswap.xyz/reference/wrapped-pools/
+      - type: PairCreation
+        url: https://docs.sudoswap.xyz/user-guide/creating-a-pool/
+      - type: ContractAddresses
+        url: https://docs.sudoswap.xyz/reference/contracts/
+      - type: GitHubRepository
+        url: https://github.com/sudoswap/lssvm2
+      - type: SecurityAudits
+        url: https://github.com/sudoswap/audits
+      - type: FinancialOperations
+        url: finops/finops.yml
+      - type: Plans
+        url: plans/plans.yml
+      - type: RateLimits
+        url: rate-limits/rate-limits.yml
+    contact:
+      - FN: Sudoswap Support
+        url: https://docs.sudoswap.xyz/managing-collections/faq/
+
+  - name: Sudoswap Subgraph API
+    description: >-
+      GraphQL subgraph deployed on The Graph that indexes sudoswap.xyz smart
+      contract events and statistics. Enables querying of pool creation events,
+      swap history, NFT collection liquidity, pair metadata, and protocol
+      statistics. Listings and bids are indexed and synced in real time.
+    image: https://sudoswap.xyz/favicon.ico
+    humanURL: https://github.com/sudoswap/subgraph-swaps
+    baseURL: https://api.thegraph.com/subgraphs/name/sudoswap/sudoswap-subgraph
+    tags:
+      - GraphQL
+      - Subgraph
+      - The Graph
+      - NFT Data
+      - Pool Statistics
+      - Swap History
+    properties:
+      - type: Documentation
+        url: https://github.com/sudoswap/subgraph-swaps
+      - type: GitHubRepository
+        url: https://github.com/sudoswap/subgraph-swaps
+      - type: FinancialOperations
+        url: finops/finops.yml
+      - type: Plans
+        url: plans/plans.yml
+      - type: RateLimits
+        url: rate-limits/rate-limits.yml
+
+  - name: Sudoswap SDK (sudo-defined-quoter)
+    description: >-
+      TypeScript/JavaScript SDK published on npm as sudo-defined-quoter that
+      wraps the Defined (formerly Codex) API to retrieve bid and ask quotes for
+      any NFT collection across multiple EVM chains. Provides getBidQuotes()
+      and getAskQuotes() methods returning pool addresses, spot prices, and
+      calculated quotes. Requires a Defined API key.
+    image: https://sudoswap.xyz/favicon.ico
+    humanURL: https://github.com/sudoswap/sudoswap-sdk
+    baseURL: https://api.defined.fi/
+    tags:
+      - SDK
+      - TypeScript
+      - NFT Pricing
+      - Bid Quotes
+      - Ask Quotes
+      - Defined API
+    properties:
+      - type: Documentation
+        url: https://github.com/sudoswap/sudoswap-sdk
+      - type: GitHubRepository
+        url: https://github.com/sudoswap/sudoswap-sdk
+      - type: NpmPackage
+        url: https://www.npmjs.com/package/sudo-defined-quoter
+      - type: DefinedApiDocs
+        url: https://docs.codex.io/
+      - type: FinancialOperations
+        url: finops/finops.yml
+      - type: Plans
+        url: plans/plans.yml
+      - type: RateLimits
+        url: rate-limits/rate-limits.yml
+
+common:
+  - type: Website
+    url: https://sudoswap.xyz/
+  - type: Documentation
+    url: https://docs.sudoswap.xyz/
+  - type: Blog
+    url: https://blog.sudoswap.xyz/
+  - type: GitHub
+    url: https://github.com/sudoswap
+  - type: Twitter
+    url: https://twitter.com/sudoswap
+  - type: Discord
+    url: https://discord.gg/sudoswap
+  - type: FAQ
+    url: https://docs.sudoswap.xyz/managing-collections/faq/
+  - type: TermsOfService
+    url: https://sudoswap.xyz/terms
+  - type: PrivacyPolicy
+    url: https://sudoswap.xyz/privacy
+  - type: Status
+    url: https://github.com/sudoswap/upptime
+
+maintainers:
+  - FN: API Evangelist
+    email: kin@apievangelist.com
+    url: https://apievangelist.com/
+
+specificationVersion: "0.19"
