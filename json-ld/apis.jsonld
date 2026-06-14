@@ -1,0 +1,80 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebAPI",
+  "name": "Sudoswap",
+  "description": "Sudoswap is a minimal, gas-efficient automated market maker (AMM) protocol for NFTs that facilitates NFT-to-token swaps using customizable bonding curves. It supports ERC-721 and ERC-1155 NFTs alongside ETH and ERC-20 tokens.",
+  "url": "https://sudoswap.xyz/",
+  "image": "https://sudoswap.xyz/favicon.ico",
+  "documentation": "https://docs.sudoswap.xyz/",
+  "termsOfService": "https://sudoswap.xyz/terms",
+  "provider": {
+    "@type": "Organization",
+    "name": "Sudoswap",
+    "url": "https://sudoswap.xyz/",
+    "sameAs": [
+      "https://github.com/sudoswap",
+      "https://twitter.com/sudoswap",
+      "https://discord.gg/sudoswap"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "NFT AMM",
+      "description": "Automated market maker protocol for non-fungible tokens"
+    },
+    {
+      "@type": "Thing",
+      "name": "Bonding Curves",
+      "description": "Linear, Exponential, XYK, and GDA bonding curve contracts for price discovery"
+    },
+    {
+      "@type": "Thing",
+      "name": "DeFi",
+      "description": "Decentralized finance protocol enabling permissionless NFT liquidity"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "description": "Open protocol with no API key required for on-chain interaction; Defined API key required for SDK quote retrieval"
+  },
+  "hasPart": [
+    {
+      "@type": "WebAPI",
+      "name": "Sudoswap Smart Contract API",
+      "description": "On-chain smart contract interface for the Sudoswap AMM protocol via LSSVMPairFactory, LSSVMPair, and VeryFastRouter contracts.",
+      "url": "https://docs.sudoswap.xyz/",
+      "documentation": "https://docs.sudoswap.xyz/reference/",
+      "codeRepository": "https://github.com/sudoswap/lssvm2"
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Sudoswap Subgraph API",
+      "description": "GraphQL subgraph on The Graph indexing sudoswap smart contract events, swap history, pool creation, and protocol statistics.",
+      "url": "https://api.thegraph.com/subgraphs/name/sudoswap/sudoswap-subgraph",
+      "documentation": "https://github.com/sudoswap/subgraph-swaps",
+      "codeRepository": "https://github.com/sudoswap/subgraph-swaps"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Sudoswap SDK (sudo-defined-quoter)",
+      "description": "TypeScript/JavaScript SDK wrapping the Defined API to retrieve bid and ask quotes for NFT collections across multiple EVM chains.",
+      "url": "https://github.com/sudoswap/sudoswap-sdk",
+      "applicationCategory": "DeveloperApplication",
+      "programmingLanguage": "TypeScript",
+      "codeRepository": "https://github.com/sudoswap/sudoswap-sdk"
+    }
+  ],
+  "keywords": [
+    "NFT",
+    "AMM",
+    "DeFi",
+    "Liquidity",
+    "Bonding Curves",
+    "ERC-721",
+    "ERC-1155",
+    "Ethereum",
+    "Smart Contracts"
+  ],
+  "dateModified": "2026-06-14"
+}
