@@ -1,6 +1,6 @@
 {
   "url": "https://blog.sudoswap.xyz/",
-  "fetched": "2026-06-14",
+  "fetched": "2026-06-14T20:42:17Z",
   "posts": [
     {
       "title": "Gradual Dutch Auctions",
@@ -26,5 +26,16 @@
       "date": "2022-05-06",
       "summary": "Comparison of sudoAMM versus other AMM protocols, focusing on sudoAMM versus constant product invariant (x*y=k) used by protocols like Bancor and Uniswap, with analysis of NFT trader preferences."
     }
-  ]
+  ],
+  "repo": "sudoswap",
+  "feeds": [
+    {
+      "source": "https://docs.sudoswap.xyz/",
+      "feed_url": "https://docs.sudoswap.xyz/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0
 }
