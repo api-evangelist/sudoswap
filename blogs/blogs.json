@@ -1,41 +1,14 @@
 {
-  "url": "https://blog.sudoswap.xyz/",
-  "fetched": "2026-06-14T20:42:17Z",
-  "posts": [
-    {
-      "title": "Gradual Dutch Auctions",
-      "url": "https://blog.sudoswap.xyz/gradual-dutch-auctions",
-      "date": "2023-11-21",
-      "summary": "Gradual Dutch Auctions (GDAs) are a way of efficiently selling multiple items. Like a Dutch Auction, a GDA starts prices high and adjusts lower over time, but the price jumps up every time a token is sold."
-    },
-    {
-      "title": "Introducing sudoswap v2",
-      "url": "https://blog.sudoswap.xyz/introducing-sudoswap-v2",
-      "date": "2023-06-08",
-      "summary": "sudoswap v2 is a new NFT marketplace protocol designed to support every type of token. Features include on-chain royalties for creators, custom liquidity settings, and ERC-1155 support."
-    },
-    {
-      "title": "SUDO distribution",
-      "url": "https://blog.sudoswap.xyz/sudo-distribution",
-      "date": "2022-09-01",
-      "summary": "Outlines the distribution of SUDO, the governance token of the sudoAMM protocol. Initial supply of 60M SUDO distributed among XMON holders (41.9%), 0xmons NFT holders (1.5%), and retroactive participants."
-    },
-    {
-      "title": "deep dive 1: sudoAMM vs the other AMMs they told u not to worry about",
-      "url": "https://blog.sudoswap.xyz/deep-dive-1-sudoamm-vs-the-other-amms-they-told-u-not-to-worry-about",
-      "date": "2022-05-06",
-      "summary": "Comparison of sudoAMM versus other AMM protocols, focusing on sudoAMM versus constant product invariant (x*y=k) used by protocols like Bancor and Uniswap, with analysis of NFT trader preferences."
-    }
-  ],
   "repo": "sudoswap",
   "feeds": [
     {
-      "source": "https://docs.sudoswap.xyz/",
-      "feed_url": "https://docs.sudoswap.xyz/",
-      "title": "",
+      "source": "https://blog.sudoswap.xyz/",
+      "feed_url": "",
       "saved": 0,
-      "method": "none"
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 0
+  "fetched": "2026-06-27T13:12:34Z",
+  "post_count": 0,
+  "agent_pulled": "2026-06-27"
 }
