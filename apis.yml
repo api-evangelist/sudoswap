@@ -127,6 +127,8 @@ apis:
         url: rate-limits/rate-limits.yml
 
 common:
+  - type: DomainSecurity
+    url: security/sudoswap-domain-security.yml
   - type: Website
     url: https://sudoswap.xyz/
   - type: Documentation
