@@ -2,13 +2,14 @@
   "repo": "sudoswap",
   "feeds": [
     {
-      "source": "https://blog.sudoswap.xyz/",
-      "feed_url": "",
+      "source": "https://docs.sudoswap.xyz/",
+      "feed_url": "https://docs.sudoswap.xyz/",
+      "title": "",
       "saved": 0,
-      "method": "agent-scrape"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T13:12:34Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0,
   "agent_pulled": "2026-06-27"
 }
