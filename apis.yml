@@ -9,6 +9,18 @@ description: >-
   and off-chain indexing services such as The Graph subgraph and the
   Defined/Codex data API. Sudoswap v2 is deployed on Ethereum mainnet,
   Arbitrum, Base, Berachain, Sanko, and other EVM-compatible networks.
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://sudoswap.xyz/favicon.ico
 tags:
   - NFT
