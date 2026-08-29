@@ -9,6 +9,19 @@ description: >-
   and off-chain indexing services such as The Graph subgraph and the
   Defined/Codex data API. Sudoswap v2 is deployed on Ethereum mainnet,
   Arbitrum, Base, Berachain, Sanko, and other EVM-compatible networks.
+deliveryModel:
+  model: open-core
+  license: AGPL-3.0
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
@@ -139,6 +152,10 @@ apis:
         url: rate-limits/rate-limits.yml
 
 common:
+  - type: IssueTracker
+    url: https://github.com/sudoswap/lssvm2/issues
+  - type: Releases
+    url: https://github.com/sudoswap/lssvm2/releases
   - type: License
     name: AGPL-3.0
     url: https://github.com/sudoswap/lssvm2/blob/main/LICENSE
