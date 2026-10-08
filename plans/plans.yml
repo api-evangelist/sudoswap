@@ -56,3 +56,28 @@ plans:
       - Multi-chain support (Mainnet, Arbitrum, Base, Sanko)
       - Pool address and spot price data
       - NFT metadata and collection-level analytics
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Open Protocol (Free)
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: The Graph Subgraph (Free Tier)
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Defined/Codex API (API Key Required)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
