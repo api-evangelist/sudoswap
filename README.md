@@ -64,40 +64,113 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Sudoswap is a minimal, gas-efficient automated market maker (AMM) protocol for NFTs. It facilitates NFT-to-token and NFT-to-NFT swaps using customizable bonding curves (Linear, Exponential, XYK, and GDA). The protocol supports ERC-721 and ERC-1155 NFTs alongside ETH and ERC-20 tokens, and is deployed on Ethereum, Base, Arbitrum, Berachain, Sanko, and other EVM-compatible networks.
+Sudoswap is a minimal, gas-efficient automated market maker (AMM) protocol for NFTs that facilitates NFT-to-token swaps using customizable bonding curves. It supports ERC-721 and ERC-1155 NFTs alongside ETH and ERC-20 tokens. Liquidity providers can create single-sided buy/sell pools or dual-sided trade pools to earn fees. Developers interact with the protocol through smart contracts (LSSVMPair, VeryFastRouter, bonding curve contracts) and off-chain indexing services such as The Graph subgraph and the Defined/Codex data API. Sudoswap v2 is deployed on Ethereum mainnet, Arbitrum, Base, Berachain, Sanko, and other EVM-compatible networks.
 
-## APIs
+**Areas:** NFT · AMM · DeFi · Liquidity · Bonding Curves · ERC-721 · ERC-1155 · Ethereum
 
-This repository catalogs three developer-facing interfaces:
+## Sudoswap on APIs.io
 
-1. **Smart Contract API** — Permissionless on-chain interface via LSSVMPairFactory, LSSVMPair, VeryFastRouter, and bonding curve contracts. No API keys required; only gas fees apply.
-2. **Subgraph API** — GraphQL subgraph on The Graph that indexes pool creation, swap events, and protocol statistics for off-chain querying.
-3. **SDK (sudo-defined-quoter)** — TypeScript npm package that wraps the Defined (Codex) API to return real-time bid/ask quotes for NFT collections across supported chains.
+Everything profiled for Sudoswap is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/sudoswap/](https://apis.io/providers/sudoswap/)** — or go straight to one of the APIs or properties below.
 
-## Key Contract Addresses (Mainnet)
+### APIs (3)
 
-| Contract | Address |
+- [Sudoswap Smart Contract API](https://apis.io/apis/sudoswap/sudoswap-smart-contract-api/) — On-chain smart contract interface for the Sudoswap AMM protocol. Developers interact with LSSVMPairFactory to create pools, with LSSVMPair contracts to…
+- [Sudoswap Subgraph API](https://apis.io/apis/sudoswap/sudoswap-subgraph-api/) — GraphQL subgraph deployed on The Graph that indexes sudoswap.xyz smart contract events and statistics. Enables querying of pool creation events, swap…
+- [Sudoswap SDK (sudo-defined-quoter)](https://apis.io/apis/sudoswap/sudoswap-sdk-sudo-defined-quoter/) — TypeScript/JavaScript SDK published on npm as sudo-defined-quoter that wraps the Defined (formerly Codex) API to retrieve bid and ask quotes for any NFT…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Apis Context](https://apis.io/jsonld/sudoswap/apis/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Sudoswap Domain Security](https://apis.io/security/sudoswap/sudoswap-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/sudoswap/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/sudoswap/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/sudoswap/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://sudoswap.xyz/)
+- [Documentation](https://docs.sudoswap.xyz/)
+- [Blog](https://blog.sudoswap.xyz/)
+- [Terms of service](https://sudoswap.xyz/terms)
+- [Privacy policy](https://sudoswap.xyz/privacy)
+
+## API Evangelist rating
+
+**Kin Score 17.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| Pair Factory | `0xA020d57aB0448Ef74115c112D18a9C231CC86000` |
-| Very Fast Router | `0x090C236B62317db226e6ae6CD4c0Fd25b7028b65` |
-| Linear Curve | `0xe5d78fec1a7f42d2F3620238C498F088A866FdC5` |
-| Exponential Curve | `0xfa056C602aD0C0C4EE4385b3233f2Cb06730334a` |
-| XYK Curve | `0xc7fB91B6cd3C67E02EC08013CEBb29b1241f3De5` |
-| GDA Curve | `0x1fD5876d4A3860Eb0159055a3b7Cb79fdFFf6B67` |
+| Discoverability | 78.6 |
+| Contract quality | 6.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 7.9 |
 
-## Links
+**Agent readiness 0.6** — human-only
 
-- Website: https://sudoswap.xyz/
-- Documentation: https://docs.sudoswap.xyz/
-- GitHub: https://github.com/sudoswap
-- Blog: https://blog.sudoswap.xyz/
-- SDK: https://github.com/sudoswap/sudoswap-sdk
-- Subgraph: https://github.com/sudoswap/subgraph-swaps
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-## Governance
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
 
-The protocol is governed by the $SUDO token. Holders with at least 300,000 SUDO delegated can submit on-chain proposals to adjust fees, add bonding curves, and update routers.
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/sudoswap/](https://apis.io/providers/sudoswap/).
 
----
+## How this profile is made
 
-Maintained by [API Evangelist](https://apievangelist.com/)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Sudoswap: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/sudoswap/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
